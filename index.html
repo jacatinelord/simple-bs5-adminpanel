@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/modified.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- overlay -->
+    <div id="sidebar-overlay" class="overlay w-100 vh-100 position-fixed d-none"></div>
+
+    <!-- sidebar -->
+    <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 w-sm-100 bg-white shadow-lg sidebar" id="sidebar">
+        <h1 class="text-primary d-flex my-4 justify-content-center">BS5 Panel</h1>
+        <div class="list-group rounded-0">
+            <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center">
+                <span class="bi bi-border-all"></span>
+                <span class="ml-2">Dashboard</span>
+            </a>
+            <button
+                class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+                type="button" data-bs-toggle="collapse" data-bs-target="#formscontrol" aria-expanded="false"
+                aria-controls="formscontrol">
+                <div>
+                    <i class="bi bi-card-list"></i>
+                    <span class="ml-2">Forms</span>
+                </div>
+                <span class="bi bi-chevron-down small"></span>
+            </button>
+            <div class="collapse" id="formscontrol">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action border-0 pl-5 form1">Form Lengkap</a>
+                </div>
+            </div>
+            <button
+                class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+                type="button" data-bs-toggle="collapse" data-bs-target="#tablecontrol" aria-expanded="false"
+                aria-controls="tablecontrol">
+                <div>
+                    <i class="bi bi-table"></i>
+                    <span class="ml-2">Tables</span>
+                </div>
+                <span class="bi bi-chevron-down small"></span>
+            </button>
+            <div class="collapse" id="tablecontrol">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action border-0 pl-5 table1">Integrasi Data Table</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-9 col-lg-10 ml-md-auto px-0 ms-md-auto">
+        <!-- top nav -->
+        <nav class="w-100 shadow-sm">
+            <!-- close sidebar -->
+            <div class="row">
+                <div class="col-6 d-flex justify-content-start">
+                    <button class="btn py-0 d-lg-none" id="open-sidebar">
+                        <span class="bi bi-list text-primary h3"></span>
+                    </button>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <div class="dropdown">
+                        <button class="btn d-flex align-items-center dropdown-toggle border-1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="bi bi-person text-primary h4"></span> Kontrol Akun
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                            <li><a class="dropdown-item" href="#">Keluar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+
+        <!-- main content -->
+        <main class="p-4 min-vh-100">
+            <div class="jumbotron jumbotron-fluid rounded bg-white border-0 shadow-sm border-left px-4">
+                <div class="container">
+                    <h1 class="display-4 mb-2 text-primary">Simple Admin Panel</h1>
+                    <p class="lead text-muted">Simple Admin Dashboard with Bootstrap.</p>
+                </div>
+            </div>
+            <div class="panel-data">
+
+            </div>
+
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/panel-loader.js"></script>
+</body>
+
+</html>
